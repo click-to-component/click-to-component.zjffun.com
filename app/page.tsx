@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { PageRoutes } from "@/lib/pageroutes"
 import { buttonVariants } from "@/components/ui/button"
+import Tip from "@/components/tip"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         Click a component in your browser to instantly open the source in VS
         Code. Support custom config open WebStorm, Cursor, GitHub, etc.
       </p>
+      <Tip></Tip>
       <div className="flex items-center gap-5">
         <Link
           href={`/docs${PageRoutes[0].href}`}

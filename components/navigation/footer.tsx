@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import { Company } from "@/lib/meta"
+import { Company, Settings } from "@/lib/meta"
 
 export function Footer() {
   return (
@@ -12,19 +12,18 @@ export function Footer() {
           <Link className="font-semibold" href={Company.link}>
             {Company.name}
           </Link>
-          .
         </p>
         {Company.branding !== false && (
           <div className="text-center hidden md:block">
             <Link
               className="font-semibold"
-              href="https://www.rubixstudios.com.au"
+              href={Settings.url}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Image
-                src="/logo.svg"
-                alt="Rubix Studios Logo"
+                src={Settings.siteicon}
+                alt={Settings.title}
                 width={30}
                 height={30}
               />
