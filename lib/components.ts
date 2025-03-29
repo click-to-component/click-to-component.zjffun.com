@@ -5,7 +5,7 @@ import CardGrid from "@/components/markdown/cardgrid"
 import { FileTree } from "@/components/markdown/dynamic-filetree"
 import { File, Folder } from "@/components/markdown/filetree"
 import RoutedLink from "@/components/markdown/link"
-import Mermaid from "@/components/markdown/mermaid"
+// import Mermaid from "@/components/markdown/mermaid"
 import Note from "@/components/markdown/note"
 import { Step, StepItem } from "@/components/markdown/step"
 
@@ -16,7 +16,7 @@ export const components = {
   FileTree,
   Folder,
   File,
-  Mermaid,
+  // Mermaid,
   Note,
   pre: Pre,
   Step,

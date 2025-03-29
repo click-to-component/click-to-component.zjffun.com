@@ -74,7 +74,7 @@ function removeCustomComponents() {
     "TabsList",
     "TabsTrigger",
     "pre",
-    "Mermaid",
+    // "Mermaid",
   ]
 
   return (tree: Node) => {
