@@ -1,25 +1,24 @@
-export const url = "https://rubix-documents.vercel.app"
+export const url = "https://click-to-component.zjffun.com"
 export const siteicon = "/icon.png"
 
-export const gtm = "GTM-XXXXXXX"
+export const gtm = "GTM-5HHPJN2S"
 export const gtmconnected = true
 
-export const sitename = "Documents"
+export const sitename = "Click To Component"
 export const description =
-  "This comprehensive documentation template, crafted with Next.js and available as open-source, delivers a sleek and responsive design, tailored to meet all your project documentation requirements."
+  "Click a component in your browser to instantly open the source in VS Code. Support custom config open WebStorm, Cursor, GitHub, etc."
 export const keywords = [
-  "Next.js",
-  "documentation",
-  "Rubix Studios",
-  "open source",
-  "SEO",
+  "click to compoennt",
+  "extesnion",
+  "open code",
+  "vs code",
 ]
 export const urlimage = "/images/og-image.png"
-export const imagealt = "Rubix Studios Documentation"
-export const twitterhandle = "@RubixStudios"
+export const imagealt = "Click To Component"
+export const twitterhandle = "@zjffun"
 
-export const companyname = "Rubix Studios"
-export const companylink = "https://www.rubixstudios.com.au"
+export const companyname = "zjffun"
+export const companylink = "https://www.zjffun.com"
 
 export const branding = true
 export const rightsidebar = true
