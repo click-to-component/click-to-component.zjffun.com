@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { GoogleTagManager } from "@next/third-parties/google"
-import { GeistMono } from "geist/font/mono"
-import { GeistSans } from "geist/font/sans"
+// import { GeistMono } from "geist/font/mono"
+// import { GeistSans } from "geist/font/sans"
 
 import { Settings } from "@/lib/meta"
 import { Footer } from "@/components/navigation/footer"
@@ -52,7 +52,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       {Settings.gtmconnected && <GoogleTagManager gtmId={Settings.gtm} />}
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} font-regular`}
+        // className={`${GeistSans.variable} ${GeistMono.variable} font-regular`}
         suppressHydrationWarning
       >
         <ThemeProvider

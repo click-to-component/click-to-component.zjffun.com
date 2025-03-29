@@ -48,6 +48,7 @@
     "unist-util-visit": "^5.0.0"
   },
   "devDependencies": {
+    "@babel/runtime": "^7.27.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.0",
     "@tailwindcss/typography": "^0.5.14",
     "@types/next": "^9.0.0",
@@ -58,6 +59,7 @@
     "@types/tailwindcss": "^3.1.0",
     "@typescript-eslint/parser": "^8.18.2",
     "autoprefixer": "^10.4.20",
+    "babel-plugin-transform-react-jsx-data-source-code-location": "^0.0.1",
     "eslint": "^9.17.0",
     "eslint-config-next": "^15.1.3",
     "husky": "^9.1.6",
