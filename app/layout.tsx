@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { GoogleTagManager } from "@next/third-parties/google"
+
 // import { GeistMono } from "geist/font/mono"
 // import { GeistSans } from "geist/font/sans"
 
@@ -8,6 +9,7 @@ import { Footer } from "@/components/navigation/footer"
 import { Navbar } from "@/components/navigation/navbar"
 import { ThemeProvider } from "@/components/theme-provider"
 
+import "@/lib/clickToComponent"
 import "./globals.css"
 
 const baseUrl = Settings.metadataBase
