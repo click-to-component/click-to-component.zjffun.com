@@ -12,5 +12,11 @@ window.__CLICK_TO_COMPONENT_URL_FUNCTION__ = function (
       "https://github.com/zjffun/click-to-component.zjffun.com/blob/main$1#L$2"
     )
 
-  return result
+  /*
+   * https://github.com/zjffun/click-to-component.zjffun.com/blob/main/app/docs/[[...slug]]/page.tsx#L28 will 404,
+   * so encode [[...slug]] to open in GitHub
+   */
+  const encodedResult = encodeURI(result)
+
+  return encodedResult
 }
