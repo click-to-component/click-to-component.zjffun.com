@@ -1,0 +1,109 @@
+---
+title: Setup
+description: This guide covers the setup of Click To Component of Vue.js.
+keywords: ["installation", "guide", 'vue', 'click to component']
+---
+
+<Step>
+<StepItem title="Installation">
+<Tabs defaultValue="npm" className="pt-5 pb-1">
+<TabsList className="">
+  <TabsTrigger value="npm">npm</TabsTrigger>
+  <TabsTrigger value="yarn">yarn</TabsTrigger>
+  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+</TabsList>
+<TabsContent value="npm">
+```bash
+npm install --save-dev vue-click-to-component
+```
+</TabsContent>
+<TabsContent value="yarn">
+```bash
+yarn add -D vue-click-to-component
+```
+</TabsContent>
+<TabsContent value="pnpm">
+```bash
+pnpm add -D vue-click-to-component
+```
+</TabsContent>
+</Tabs>
+</StepItem>
+
+<StepItem title="Usage">
+<Tabs defaultValue="vite" className="pt-5 pb-1">
+<TabsList className="">
+  <TabsTrigger value="vite">Vite</TabsTrigger>
+  <TabsTrigger value="vue-cli">Vue CLI</TabsTrigger>
+  <TabsTrigger value="webpack">webpack</TabsTrigger>
+</TabsList>
+<TabsContent value="vite">
+[`vite.config.ts`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/vite/vite.config.ts#L7)
+
+```js
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
++import vueClickToComponent from 'vue-click-to-component/vite-plugin';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+-  plugins: [vue()],
++  plugins: [vueClickToComponent(), vue()],
+})
+```
+
+</TabsContent>
+<TabsContent value="vue-cli">
+[`vue.config.js`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/vue-cli/vue.config.js#L6-L8)
+
+```js
+const { defineConfig } = require("@vue/cli-service");
++const vueClickToComponent = require("vue-click-to-component/vue-cli-plugin");
+
+module.exports = defineConfig({
+transpileDependencies: true,
++  chainWebpack: (config) => {
++    vueClickToComponent(config);
++  },
+});
+```
+</TabsContent>
+<TabsContent value="webpack">
+[`webpack.config.js`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/webpack/webpack.config.js#L31-L35)
+
+```js
+module: {
+rules: [
++    {
++        test: /\.vue$/,
++        enforce: 'pre',
++        loader: 'vue-click-to-component/loader',
++    },
+  {
+      test: /\.vue$/,
+      loader: 'vue-loader',
+  },
+],
+},
+```
+
+[`package.json`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/webpack/package.json#L10)
+
+```json
+"scripts": {
+-  "serve": "webpack serve"
++  "serve": "NODE_ENV=development webpack serve"
+}
+```
+</TabsContent>
+</Tabs>
+</StepItem>
+<StepItem title="Click To Component">
+
+You can using [browser extension](/docs/browser/extension) to start click to component. 
+
+If you want to start click to component without browser extension, you can using [browser script](/docs/browser/script).
+
+</StepItem>
+</Step>
+

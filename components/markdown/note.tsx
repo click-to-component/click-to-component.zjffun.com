@@ -6,12 +6,14 @@ import { cn } from "@/lib/utils"
 type NoteProps = PropsWithChildren & {
   title?: string
   type?: "note" | "success" | "warning" | "danger"
+  className?: string
 }
 
 export default function Note({
   children,
   title = "Note",
   type = "note",
+  className,
 }: NoteProps) {
   const noteClassNames = clsx({
     "dark:bg-neutral-900 bg-neutral-100": type == "note",
@@ -27,10 +29,11 @@ export default function Note({
     <div
       className={cn(
         "border rounded-md py-0.5 px-3.5 text-sm tracking-wide",
-        noteClassNames
+        noteClassNames,
+        className
       )}
     >
-      <p className="font-semibold -mb-3">{title}:</p> {children}
+      {title && <p className="font-semibold -mb-3">{title}:</p>} {children}
     </div>
   )
 }

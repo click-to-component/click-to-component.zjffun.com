@@ -17,5 +17,5 @@ export const Navigations: {
 ]
 
 export const GitHubLink = {
-  href: "https://github.com/click-to-component",
+  href: "https://github.com/click-to-component/click-to-component.zjffun.com",
 }

@@ -1,0 +1,67 @@
+---
+title: Setup
+description: This guide covers the setup of Click To Component of React.
+keywords: ["installation", "guide", 'react', 'click to component']
+---
+
+<Note title="Note" className="mb-8">
+  If you are using react < 19 (Next.js < 14.1.1) you can using [`@babel/plugin-transform-react-jsx`](https://babeljs.io/docs/babel-plugin-transform-react-jsx).
+  It may already installed and enabled in your project. So you can skip setp 1 and 2.
+</Note>
+
+<Step>
+<StepItem title="Installation">
+<Tabs defaultValue="npm" className="pt-5 pb-1">
+<TabsList className="">
+  <TabsTrigger value="npm">npm</TabsTrigger>
+  <TabsTrigger value="yarn">yarn</TabsTrigger>
+  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+</TabsList>
+<TabsContent value="npm">
+```bash
+npm install --save-dev babel-plugin-transform-react-jsx-data-source-code-location
+```
+</TabsContent>
+<TabsContent value="yarn">
+```bash
+yarn add -D babel-plugin-transform-react-jsx-data-source-code-location
+```
+</TabsContent>
+<TabsContent value="pnpm">
+```bash
+pnpm add -D babel-plugin-transform-react-jsx-data-source-code-location
+```
+</TabsContent>
+</Tabs>
+</StepItem>
+
+<StepItem title="Usage">
+
+<Note title="Important" type="danger" className="mb-8">
+Do not enable `babel-plugin-transform-react-jsx-data-source-code-location` in product enviroument.
+</Note>
+
+<Tabs defaultValue="babelrc" className="pt-5 mb-1">
+<TabsList className="">
+  <TabsTrigger value="babelrc">.babelrc</TabsTrigger>
+</TabsList>
+<TabsContent value="babelrc">
+
+```json {2}
+{
+  "plugins": ["babel-plugin-transform-react-jsx-data-source-code-location"]
+}
+```
+
+</TabsContent>
+</Tabs>
+</StepItem>
+<StepItem title="Click To Component">
+
+You can using [browser extension](/docs/browser/extension) to start click to component. 
+
+If you want to start click to component without browser extension, you can using [browser script](/docs/browser/script).
+
+</StepItem>
+</Step>
+

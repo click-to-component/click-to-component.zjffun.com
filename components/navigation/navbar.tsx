@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { GitHubLink, Navigations } from "@/settings/navigation"
+import { Navigations } from "@/settings/navigation"
 import { LuArrowUpRight, LuGithub } from "react-icons/lu"
 
 import { buttonVariants } from "@/components/ui/button"
@@ -29,17 +29,15 @@ export function Navbar() {
         <div className="flex items-center gap-2">
           {/* <Search /> */}
           <div className="flex sm:ml-0 gap-2">
-            {GitHubLink.href && (
-              <Link
-                href={GitHubLink.href}
-                className={buttonVariants({ variant: "outline", size: "icon" })}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="View the repository on GitHub"
-              >
-                <LuGithub className="w-[1.1rem] h-[1.1rem]" />
-              </Link>
-            )}
+            <Link
+              href="https://github.com/click-to-component"
+              className={buttonVariants({ variant: "outline", size: "icon" })}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View the repository on GitHub"
+            >
+              <LuGithub className="w-[1.1rem] h-[1.1rem]" />
+            </Link>
             <ModeToggle />
           </div>
         </div>

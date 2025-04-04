@@ -1,0 +1,50 @@
+---
+title: Browser  Script
+keywords: ["guide", 'browser script', 'click to component']
+---
+
+<Note title="Note" type="success" className="mb-8">
+Before using browser script, you need setup [React](/docs/react) or [Vue.js](/docs/vue) first.
+</Note>
+
+<Step>
+<StepItem title="Installation">
+<Tabs defaultValue="npm" className="pt-5 pb-1">
+<TabsList className="">
+  <TabsTrigger value="npm">npm</TabsTrigger>
+  <TabsTrigger value="yarn">yarn</TabsTrigger>
+  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+</TabsList>
+<TabsContent value="npm">
+```bash
+npm install click-to-component-browser
+```
+</TabsContent>
+<TabsContent value="yarn">
+```bash
+yarn add click-to-component-browser
+```
+</TabsContent>
+<TabsContent value="pnpm">
+```bash
+pnpm add click-to-component-browser
+```
+</TabsContent>
+</Tabs>
+</StepItem>
+
+<StepItem title="Usage">
+
+<Note title="Important" type="danger" className="mb-8">
+Do not import `click-to-component-browser` in product enviroument.
+</Note>
+
+Import `click-to-component-browser` in your project's entry file.
+
+```js
+if (process.env.NODE_ENV === 'development') {
+  import("click-to-component-browser");
+}
+```
+</StepItem>
+</Step>

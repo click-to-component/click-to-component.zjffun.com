@@ -6,6 +6,7 @@ import { compileMDX } from "next-mdx-remote/rsc"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 import rehypeCodeTitles from "rehype-code-titles"
 import rehypeKatex from "rehype-katex"
+import remarkPrismDiff from "rehype-prism-diff"
 import rehypePrism from "rehype-prism-plus"
 import rehypeSlug from "rehype-slug"
 import remarkGfm from "remark-gfm"
@@ -43,7 +44,8 @@ async function parseMdx<Frontmatter>(rawMdx: string) {
           rehypeAutolinkHeadings,
           postCopy,
         ],
-        remarkPlugins: [remarkGfm],
+        // TODO: remarkPrismDiff
+        remarkPlugins: [remarkGfm, [remarkPrismDiff, { remove: true }]],
       },
     },
     components,
