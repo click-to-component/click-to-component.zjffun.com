@@ -59,7 +59,7 @@ function removeCustomComponents() {
         "TabsList",
         "TabsTrigger",
         "pre",
-        "Mermaid",
+        // "Mermaid",
     ];
     return (tree) => {
         visit(tree, "mdxJsxFlowElement", (node, index, parent) => {

@@ -40,7 +40,7 @@ pnpm add -D vue-click-to-component
 <TabsContent value="vite">
 [`vite.config.ts`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/vite/vite.config.ts#L7)
 
-```js
+```diff-js
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 +import vueClickToComponent from 'vue-click-to-component/vite-plugin';
@@ -56,12 +56,12 @@ export default defineConfig({
 <TabsContent value="vue-cli">
 [`vue.config.js`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/vue-cli/vue.config.js#L6-L8)
 
-```js
+```diff-js
 const { defineConfig } = require("@vue/cli-service");
 +const vueClickToComponent = require("vue-click-to-component/vue-cli-plugin");
 
 module.exports = defineConfig({
-transpileDependencies: true,
+  transpileDependencies: true,
 +  chainWebpack: (config) => {
 +    vueClickToComponent(config);
 +  },
@@ -71,25 +71,25 @@ transpileDependencies: true,
 <TabsContent value="webpack">
 [`webpack.config.js`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/webpack/webpack.config.js#L31-L35)
 
-```js
+```diff-js
 module: {
-rules: [
+  rules: [
 +    {
-+        test: /\.vue$/,
-+        enforce: 'pre',
-+        loader: 'vue-click-to-component/loader',
++      test: /\.vue$/,
++      enforce: 'pre',
++      loader: 'vue-click-to-component/loader',
 +    },
-  {
+    {
       test: /\.vue$/,
       loader: 'vue-loader',
-  },
-],
+    },
+  ],
 },
 ```
 
 [`package.json`](https://github.com/click-to-component/vue-click-to-component/blob/main/examples/webpack/package.json#L10)
 
-```json
+```diff-json
 "scripts": {
 -  "serve": "webpack serve"
 +  "serve": "NODE_ENV=development webpack serve"

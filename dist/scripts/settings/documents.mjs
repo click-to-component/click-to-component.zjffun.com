@@ -3,95 +3,55 @@ export const Documents = [
         title: "Introduction",
         href: "/introduction",
         heading: "Getting started",
-        items: [
-            {
-                title: "Installation",
-                href: "/installation",
-            },
-            {
-                title: "Setup",
-                href: "/setup",
-            },
-            {
-                title: "Changelog",
-                href: "/changelog",
-            },
-        ],
     },
     {
         spacer: true,
     },
     {
-        title: "Navigation",
-        href: "/navigation",
-        heading: "Documents",
-    },
-    {
-        title: "Structure",
-        href: "/structure",
-        items: [
-            {
-                title: "Deep",
-                href: "/deep",
-                items: [
-                    {
-                        title: "Deeper",
-                        href: "/deeper",
-                        items: [
-                            {
-                                title: "Even deeper",
-                                href: "/even-deeper",
-                            },
-                        ],
-                    },
-                ],
-            },
-        ],
+        title: "Setup",
+        href: "/react",
+        heading: "React",
     },
     {
         spacer: true,
     },
     {
-        title: "Markdown",
-        href: "/markdown",
-        heading: "Components",
-        items: [
-            {
-                title: "Cards",
-                href: "/cards",
-            },
-            {
-                title: "Diagrams",
-                href: "/diagrams",
-            },
-            {
-                title: "Filetree",
-                href: "/filetree",
-            },
-            {
-                title: "Lists",
-                href: "/lists",
-            },
-            {
-                title: "Maths",
-                href: "/maths",
-            },
-            {
-                title: "Notes",
-                href: "/notes",
-            },
-            {
-                title: "Steps",
-                href: "/steps",
-            },
-            {
-                title: "Table",
-                href: "/table",
-            },
-            {
-                title: "Tabs",
-                href: "/tabs",
-            },
-        ],
+        title: "Setup",
+        href: "/vue",
+        heading: "Vue.js",
     },
+    {
+        spacer: true,
+    },
+    {
+        title: "Extension",
+        href: "/browser/extension",
+        heading: "Browser",
+    },
+    {
+        title: "Script",
+        href: "/browser/script",
+    },
+    // {
+    //   title: "Structure",
+    //   href: "/structure",
+    //   items: [
+    //     {
+    //       title: "Deep",
+    //       href: "/deep",
+    //       items: [
+    //         {
+    //           title: "Deeper",
+    //           href: "/deeper",
+    //           items: [
+    //             {
+    //               title: "Even deeper",
+    //               href: "/even-deeper",
+    //             },
+    //           ],
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
 ];
