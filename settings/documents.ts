@@ -34,6 +34,14 @@ export const Documents: Paths[] = [
     title: "Script",
     href: "/browser/script",
   },
+  {
+    spacer: true,
+  },
+  {
+    title: "Taro",
+    href: "/others/taro",
+    heading: "Others",
+  },
   // {
   //   title: "Structure",
   //   href: "/structure",

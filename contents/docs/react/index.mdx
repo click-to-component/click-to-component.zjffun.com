@@ -41,20 +41,37 @@ pnpm add -D babel-plugin-transform-react-jsx-data-source-code-location
 Do not enable `babel-plugin-transform-react-jsx-data-source-code-location` in product enviroument.
 </Note>
 
-<Tabs defaultValue="babelrc" className="pt-5 mb-1">
+<Tabs defaultValue="babel.config.js" className="pt-5 mb-1">
 <TabsList className="">
-  <TabsTrigger value="babelrc">.babelrc</TabsTrigger>
+  <TabsTrigger value="babel.config.js">babel.config.js</TabsTrigger>
 </TabsList>
-<TabsContent value="babelrc">
+<TabsContent value="babel.config.js">
 
-```json {2}
-{
-  "plugins": ["babel-plugin-transform-react-jsx-data-source-code-location"]
-}
+```diff-js
++const plugins = [];
+
++if (process.env.NODE_ENV === "development") {
++  plugins.push("babel-plugin-transform-react-jsx-data-source-code-location");
++}
+
+module.exports = {
+  presets: [],
++  plugins,
+};
+```
+
+Or
+
+```diff-js
+module.exports = {
+  presets: [],
++  plugins: [process.env.NODE_ENV === "development" && "babel-plugin-transform-react-jsx-data-source-code-location"].filter(Boolean),
+};
 ```
 
 </TabsContent>
 </Tabs>
+
 </StepItem>
 <StepItem title="Click To Component">
 

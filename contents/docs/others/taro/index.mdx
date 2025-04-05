@@ -1,0 +1,94 @@
+---
+title: Setup
+description: This guide covers the setup of Click To Component of React.
+keywords: ["installation", "guide", 'react', 'click to component']
+---
+
+<Step>
+<StepItem title="Installation">
+<Tabs defaultValue="npm" className="pt-5 pb-1">
+<TabsList className="">
+  <TabsTrigger value="npm">npm</TabsTrigger>
+  <TabsTrigger value="yarn">yarn</TabsTrigger>
+  <TabsTrigger value="pnpm">pnpm</TabsTrigger>
+</TabsList>
+<TabsContent value="npm">
+```bash
+npm install --save-dev babel-plugin-transform-react-jsx-source-to-style
+```
+</TabsContent>
+<TabsContent value="yarn">
+```bash
+yarn add -D babel-plugin-transform-react-jsx-source-to-style
+```
+</TabsContent>
+<TabsContent value="pnpm">
+```bash
+pnpm add -D babel-plugin-transform-react-jsx-source-to-style
+```
+</TabsContent>
+</Tabs>
+</StepItem>
+
+<StepItem title="Usage">
+
+<Note title="Important" type="danger" className="mb-8">
+Do not enable `babel-plugin-transform-react-jsx-source-to-style` in product enviroument.
+</Note>
+
+<Tabs defaultValue="babel.config.js" className="pt-5 mb-1">
+<TabsList className="">
+  <TabsTrigger value="babel.config.js">babel.config.js</TabsTrigger>
+</TabsList>
+<TabsContent value="babel.config.js">
+
+```diff-js
++const plugins = [];
+
++if (process.env.NODE_ENV === "development") {
++  plugins.push("babel-plugin-transform-react-jsx-source-to-style");
++}
+
+module.exports = {
+  presets: [
+    [
+      "taro",
+      {
+        framework: "react",
+        ts: true,
+        compiler: "webpack5",
+      },
+    ],
+  ],
++  plugins: [process.env.NODE_ENV === "development"],
+};
+```
+
+Or
+
+```diff-js
+module.exports = {
+  presets: [
+    [
+      "taro",
+      {
+        framework: "react",
+        ts: true,
+        compiler: "webpack5",
+      },
+    ],
+  ],
++  plugins: [process.env.NODE_ENV === "development" && "babel-plugin-transform-react-jsx-source-to-style"].filter(Boolean),
+};
+```
+
+</TabsContent>
+</Tabs>
+</StepItem>
+<StepItem title="Get Source Location Via Inspect Style">
+
+You can copy the value of  `--source-code-location` CSS variable, and using editor `Go to File...` function to open file and jump to the specified line.
+
+</StepItem>
+</Step>
+
