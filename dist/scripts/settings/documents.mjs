@@ -32,6 +32,14 @@ export const Documents = [
         title: "Script",
         href: "/browser/script",
     },
+    {
+        spacer: true,
+    },
+    {
+        title: "Taro",
+        href: "/others/taro",
+        heading: "Others",
+    },
     // {
     //   title: "Structure",
     //   href: "/structure",
