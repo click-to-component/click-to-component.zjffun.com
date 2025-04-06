@@ -6,7 +6,7 @@ export const gtmconnected = true
 
 export const sitename = "Click To Component"
 export const description =
-  "Click a component in your browser to instantly open the source in VS Code. Support custom config open WebStorm, Cursor, GitHub, etc."
+  "Click a component in your browser to instantly open the source in VS Code. Support custom configuration to open WebStorm, Cursor, GitHub, etc."
 export const keywords = [
   "click to compoennt",
   "extesnion",

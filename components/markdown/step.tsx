@@ -11,7 +11,7 @@ export function Step({ children }: PropsWithChildren<StepProps>) {
   const length = Children.count(children)
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col pl-4">
       {Children.map(children, (child, index) => (
         <div
           className={cn(

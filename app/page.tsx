@@ -11,7 +11,7 @@ export default function Home() {
       </h1>
       <p className="max-w-[600px] text-foreground mb-8 sm:text-base">
         Click a component in your browser to instantly open the source in VS
-        Code. Support custom config open WebStorm, Cursor, GitHub, etc.
+        Code. Support custom configuration to open WebStorm, Cursor, GitHub, etc.
       </p>
       <div className="flex items-center gap-5">
         <Link

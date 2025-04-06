@@ -4,6 +4,8 @@ keywords: ["guide", 'browser script', 'click to component']
 ---
 
 <Note title="Note" type="success" className="mb-8">
+We recommend using [browser extension](/docs/browser/extension) instead of browser script.
+
 Before using browser script, you need setup [React](/docs/react) or [Vue.js](/docs/vue) first.
 </Note>
 
@@ -42,7 +44,7 @@ Do not import `click-to-component-browser` in product enviroument.
 Import `click-to-component-browser` in your project's entry file.
 
 ```js
-if (process.env.NODE_ENV === 'development') {
+if (process.env.NODE_ENV === "development") {
   import("click-to-component-browser");
 }
 ```
